@@ -4,3 +4,5 @@ s3_mirror/
 pipeline_processed/
 processed/
 *.csv
+.gradio
+.ipynb_checkpoints
