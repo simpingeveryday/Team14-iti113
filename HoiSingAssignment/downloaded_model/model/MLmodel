@@ -1,26 +1,26 @@
-artifact_path: s3://nyp-26s1-iti113/iti113/team14/mlflow-app-artifacts/workspaces/default/1/models/m-1d5177e4941f48b1bed4f1131c278a10/artifacts
+artifact_path: s3://nyp-26s1-iti113/iti113/team14/mlflow-app-artifacts/workspaces/default/1/models/m-1055a2c12928453e88bbc9f7b373f520/artifacts
 flavors:
   python_function:
     env:
       conda: conda.yaml
       virtualenv: python_env.yaml
     loader_module: mlflow.sklearn
-    model_path: model.skops
+    model_path: model.pkl
     predict_fn: predict
     python_version: 3.12.13
   sklearn:
     code: null
-    pickled_model: model.skops
-    serialization_format: skops
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
     sklearn_version: 1.7.2
     skops_trusted_types: null
 is_signature_from_type_hint: false
-mlflow_version: 3.15.1
-model_id: m-1d5177e4941f48b1bed4f1131c278a10
-model_size_bytes: 5518355
-model_uuid: m-1d5177e4941f48b1bed4f1131c278a10
+mlflow_version: 3.13.0
+model_id: m-1055a2c12928453e88bbc9f7b373f520
+model_size_bytes: 4328360
+model_uuid: m-1055a2c12928453e88bbc9f7b373f520
 prompts: null
-run_id: 443da8005a87479aa36d65304eda50ef
+run_id: 3799806706b946aa88a316ffaa4eeb6d
 saved_input_example_info:
   artifact_path: input_example.json
   pandas_orient: split
@@ -102,4 +102,4 @@ signature:
   outputs: '[{"type": "double", "required": true}]'
   params: null
 type_hint_from_example: false
-utc_time_created: '2026-08-23 09:17:37.852401'
+utc_time_created: '2026-08-25 14:19:35.596089'
