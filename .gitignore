@@ -1,0 +1,6 @@
+pipeline_runs/
+artifacts/
+s3_mirror/
+pipeline_processed/
+processed/
+*.csv

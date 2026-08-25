@@ -1,0 +1,65 @@
+{
+    "team_id": "team14",
+    "student_id": "s1402",
+    "project_name": "airbnb-listings",
+    "task_type": "regression",
+    "target": "log_price",
+    "best_run_id": "443da8005a87479aa36d65304eda50ef",
+    "best_run_name": "team14_s1402_champion_refit",
+    "best_model_uri": "runs:/443da8005a87479aa36d65304eda50ef/model",
+    "best_metrics": {
+        "test_mae_log": 0.3207,
+        "test_rmse_log": 0.451,
+        "test_r2_log": 0.8708,
+        "test_mape": 33.41
+    },
+    "model_type": "HistGradientBoostingRegressor",
+    "hyperparameters": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 127,
+        "max_iter": 300,
+        "min_samples_leaf": 50,
+        "l2_regularization": 1.0,
+        "early_stopping": false,
+        "random_state": 42
+    },
+    "quality_gate": {
+        "metric": "test_r2_log",
+        "threshold": 0.65,
+        "passed": true
+    },
+    "validation_protocol": {
+        "design": "train -> (fit, validation) 80/20 stratified by city; test from Notebook 01",
+        "n_fit": 178715,
+        "n_val": 44679,
+        "n_train_refit": 223394,
+        "n_test": 55849,
+        "selection_metric": "val_mae_log",
+        "selection_n_candidates": 4,
+        "selected_run_id": "dbebce13821449cc93023200bff56e10",
+        "selected_val_mae_log": 0.3262,
+        "champion_refit_on": "full training set (fit + validation)",
+        "champion_run_id": "443da8005a87479aa36d65304eda50ef",
+        "champion_executions": 3,
+        "distinct_test_results": 1,
+        "test_decisions": 1,
+        "audit": "verified against the tracking server in 8C",
+        "known_limitations": {
+            "preprocessor_fitted_on_full_train": "Notebook 01 fitted imputation medians, scaler statistics, amenity vocabulary, neighbourhood frequencies and one-hot levels on the whole training split, which now includes the validation portion. Bounded (aggregates over ~223k rows) and symmetric across candidates, so the selection RANKING is unaffected; the test split was never in the preprocessor's fit, so reported metrics are clean.",
+            "val_test_label_scales_comparable": true,
+            "val_label_ceiling": 31341.220000000034,
+            "test_label_ceiling": 31341.220000000034
+        }
+    },
+    "selection": {
+        "selected_run_id": "dbebce13821449cc93023200bff56e10",
+        "selected_run_name": "team14_s1402_hgb_tuning_parent",
+        "metric": "val_mae_log",
+        "value": 0.3262,
+        "runner_up_margin": 0.014800000000000035
+    },
+    "mlflow_tracking_uri": "arn:aws:sagemaker:ap-southeast-1:044528205969:mlflow-app/app-PIGMOQJH46PS",
+    "mlflow_experiment": "ITI113/team14/Experiment1",
+    "tracking_backend": "sagemaker_mlflow_app",
+    "mlflow_app_team_tag": "team14"
+}

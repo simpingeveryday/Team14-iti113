@@ -1,0 +1,158 @@
+{
+  "project": "airbnb",
+  "team_id": "team14",
+  "student_id": "s1402",
+  "created_utc": "2026-08-11T08:49:04.625543+00:00",
+  "task_type": "regression",
+  "target": "log_price_usd",
+  "target_raw": "price_usd",
+  "target_transform": "natural log",
+  "group_column": "host_id",
+  "split_strategy": "GroupShuffleSplit on host_id",
+  "test_size": 0.2,
+  "random_state": 42,
+  "snapshot_date": "2021-03-01",
+  "numeric_features": [
+    "accommodates",
+    "log_accommodates",
+    "bedrooms_filled",
+    "bedrooms_imputed",
+    "guests_per_bedroom",
+    "is_studio",
+    "log_min_nights",
+    "log_max_nights",
+    "booking_window",
+    "is_long_stay_only",
+    "is_short_stay_friendly",
+    "host_tenure_years",
+    "log_host_listings",
+    "is_professional_host",
+    "host_response_rate_f",
+    "host_acceptance_rate_f",
+    "host_response_missing",
+    "host_response_speed",
+    "host_is_local",
+    "host_is_superhost_b",
+    "host_has_profile_pic_b",
+    "host_identity_verified_b",
+    "instant_bookable_b",
+    "has_reviews",
+    "review_scores_rating_f",
+    "review_scores_accuracy_f",
+    "review_scores_cleanliness_f",
+    "review_scores_checkin_f",
+    "review_scores_communication_f",
+    "review_scores_location_f",
+    "review_scores_value_f",
+    "value_gap",
+    "location_premium_score",
+    "dist_center_km",
+    "log_dist_center",
+    "lat_offset",
+    "lon_offset",
+    "amenity_count",
+    "amenity_density",
+    "luxury_score",
+    "safety_score",
+    "is_rare_property",
+    "am_wifi",
+    "am_kitchen",
+    "am_air_conditioning",
+    "am_heating",
+    "am_washer",
+    "am_dryer",
+    "am_tv",
+    "am_elevator",
+    "am_free_parking_on_premises",
+    "am_pool",
+    "am_gym",
+    "am_dishwasher",
+    "am_hot_tub",
+    "am_patio_or_balcony",
+    "am_private_entrance",
+    "am_dedicated_workspace",
+    "am_long_term_stays_allowed",
+    "am_breakfast",
+    "am_smoke_alarm",
+    "am_carbon_monoxide_alarm",
+    "am_fire_extinguisher",
+    "am_first_aid_kit",
+    "am_lock_on_bedroom_door",
+    "am_bathtub",
+    "am_coffee_maker",
+    "am_cable_tv",
+    "am_garden_or_backyard",
+    "am_bbq_grill",
+    "am_waterfront",
+    "am_beachfront"
+  ],
+  "categorical_features": [
+    "city",
+    "room_type",
+    "property_group"
+  ],
+  "target_encode_features": [
+    "city_neigh"
+  ],
+  "n_features": 76,
+  "n_train": 221299,
+  "n_test": 55686,
+  "fx_to_usd": {
+    "Paris": 1.21,
+    "Rome": 1.21,
+    "New York": 1.0,
+    "Sydney": 0.77,
+    "Rio de Janeiro": 0.185,
+    "Istanbul": 0.135,
+    "Mexico City": 0.049,
+    "Bangkok": 0.033,
+    "Cape Town": 0.067,
+    "Hong Kong": 0.129
+  },
+  "city_center": {
+    "Paris": [
+      48.8566,
+      2.3522
+    ],
+    "Rome": [
+      41.9028,
+      12.4964
+    ],
+    "New York": [
+      40.758,
+      -73.9855
+    ],
+    "Sydney": [
+      -33.8688,
+      151.2093
+    ],
+    "Rio de Janeiro": [
+      -22.9068,
+      -43.1729
+    ],
+    "Istanbul": [
+      41.0082,
+      28.9784
+    ],
+    "Mexico City": [
+      19.4326,
+      -99.1332
+    ],
+    "Bangkok": [
+      13.7563,
+      100.5018
+    ],
+    "Cape Town": [
+      -33.9249,
+      18.4241
+    ],
+    "Hong Kong": [
+      22.3193,
+      114.1694
+    ]
+  },
+  "quality_gate_r2": 0.7,
+  "estimated_r2_ceiling": 0.8891,
+  "raw_data_uri": "local://Listings.csv",
+  "processed_prefix": "artifacts"
+}

@@ -1,0 +1,91 @@
+{
+  "iti113/team14/trigger/input/Listings_2021-04.csv|146046994": {
+    "event_id": "evt-20260814-082019-7d5ec9",
+    "status": "Succeeded",
+    "at": "2026-08-14T08:29:52.860871+00:00"
+  },
+  "iti113/team14/trigger/input/Listings_2021-05_schema_drift.csv|171775": {
+    "event_id": "evt-20260814-102713-340fea",
+    "status": "Failed",
+    "at": "2026-08-14T10:32:45.658045+00:00",
+    "failed_step": "TrainModel",
+    "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/Listings_2021-05_schema_drift.csv"
+  },
+  "iti113/team14/trigger/input/Listings_live_1786722834.csv|146046994": {
+    "event_id": "evt-20260816-153542-3ffef0",
+    "status": "Succeeded",
+    "at": "2026-08-16T15:47:47.254218+00:00"
+  },
+  "iti113/team14/trigger/input/LOCAL_LISTING_test_1786993815.csv|4336": {
+    "event_id": "evt-20260821-185339-df431a",
+    "status": "Failed",
+    "at": "2026-08-21T18:59:11.855914+00:00",
+    "failed_step": "PreprocessData",
+    "failure": "ClientError: AlgorithmError: , exit code: 1",
+    "execution_arn": "arn:aws:sagemaker:ap-southeast-1:044528205969:pipeline/iti113-team14-airbnb-price-triggered/execution/epmfbkmbpqy8",
+    "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/LOCAL_LISTING_test_1786993815.csv"
+  },
+  "iti113/team14/trigger/input/LOCAL_LISTING_test_1787141879.csv|4336": {
+    "event_id": "evt-20260821-185912-53cc92",
+    "status": "Failed",
+    "at": "2026-08-21T19:02:13.707903+00:00",
+    "failed_step": "PreprocessData",
+    "failure": "ClientError: AlgorithmError: , exit code: 1",
+    "execution_arn": "arn:aws:sagemaker:ap-southeast-1:044528205969:pipeline/iti113-team14-airbnb-price-triggered/execution/uh3wi61pg136",
+    "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/LOCAL_LISTING_test_1787141879.csv"
+  },
+  "iti113/team14/trigger/input/LOCAL_LISTING_test_1787200433.csv|4336": {
+    "event_id": "evt-20260821-190213-ba504a",
+    "status": "Failed",
+    "at": "2026-08-21T19:07:46.301038+00:00",
+    "failed_step": "PreprocessData",
+    "failure": "ClientError: AlgorithmError: , exit code: 1",
+    "execution_arn": "arn:aws:sagemaker:ap-southeast-1:044528205969:pipeline/iti113-team14-airbnb-price-triggered/execution/4pc7ekdhyhox",
+    "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/LOCAL_LISTING_test_1787200433.csv"
+  },
+  "iti113/team14/trigger/input/LOCAL_LISTING_test_1787208425.csv|4336": {
+    "event_id": "evt-20260821-190746-4f48f3",
+    "status": "Failed",
+    "at": "2026-08-21T19:13:18.871886+00:00",
+    "failed_step": "PreprocessData",
+    "failure": "ClientError: AlgorithmError: , exit code: 1",
+    "execution_arn": "arn:aws:sagemaker:ap-southeast-1:044528205969:pipeline/iti113-team14-airbnb-price-triggered/execution/wwkgh5a04w48",
+    "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/LOCAL_LISTING_test_1787208425.csv"
+  },
+  "iti113/team14/trigger/input/LOCAL_LISTING_test_1787209917.csv|4336": {
+    "event_id": "evt-20260821-193433-eb79a9",
+    "status": "Failed",
+    "at": "2026-08-21T19:34:34.076973+00:00",
+    "failed_step": "PreprocessData",
+    "failure": "ClientError: AlgorithmError: , exit code: 1",
+    "execution_arn": "arn:aws:sagemaker:ap-southeast-1:044528205969:pipeline/iti113-team14-airbnb-price-triggered/execution/lmzj2anst0w7",
+    "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/LOCAL_LISTING_test_1787209917.csv"
+  },
+  "iti113/team14/trigger/input/LOCAL_LISTING_test_1787211750.csv|4336": {
+    "event_id": "evt-20260821-193434-64b1b5",
+    "status": "Failed",
+    "at": "2026-08-21T19:40:06.447163+00:00",
+    "failed_step": "PreprocessData",
+    "failure": "ClientError: AlgorithmError: , exit code: 1",
+    "execution_arn": "arn:aws:sagemaker:ap-southeast-1:044528205969:pipeline/iti113-team14-airbnb-price-triggered/execution/8bqlvwecwk6z",
+    "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/LOCAL_LISTING_test_1787211750.csv"
+  },
+  "iti113/team14/trigger/input/LOCAL_LISTING_test_1787212438.csv|4336": {
+    "event_id": "evt-20260821-194006-2c9101",
+    "status": "Failed",
+    "at": "2026-08-21T19:43:08.193348+00:00",
+    "failed_step": "PreprocessData",
+    "failure": "ClientError: AlgorithmError: , exit code: 1",
+    "execution_arn": "arn:aws:sagemaker:ap-southeast-1:044528205969:pipeline/iti113-team14-airbnb-price-triggered/execution/h0qhs1pq0mmx",
+    "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/LOCAL_LISTING_test_1787212438.csv"
+  },
+  "iti113/team14/trigger/input/LOCAL_LISTING_test_1787213149.csv|4336": {
+    "event_id": "evt-20260821-194308-c64bbc",
+    "status": "Failed",
+    "at": "2026-08-21T19:46:10.012730+00:00",
+    "failed_step": "PreprocessData",
+    "failure": "ClientError: AlgorithmError: , exit code: 1",
+    "execution_arn": "arn:aws:sagemaker:ap-southeast-1:044528205969:pipeline/iti113-team14-airbnb-price-triggered/execution/yau71v1nykdr",
+    "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/LOCAL_LISTING_test_1787213149.csv"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "REGION": "ap-southeast-1",
+  "MLFLOW_APP_ARN": "arn:aws:sagemaker:ap-southeast-1:044528205969:mlflow-app/app-PIGMOQJH46PS",
+  "EXPERIMENT_NAME": "ITI113/team14/Experiment1",
+  "TEAM_ID": "team14",
+  "STUDENT_ID": "s1402",
+  "PROJECT_NAME": "airbnb",
+  "ARTIFACT_STORE_URI": "s3://nyp-26s1-iti113/iti113/team14/mlflow-app-artifacts/",
+  "MLFLOW_APP_NAME": "iti113-26s1-team14-mlflow-app",
+  "MLFLOW_APP_TAGS": [
+    {
+      "Key": "Course",
+      "Value": "ITI113"
+    },
+    {
+      "Key": "Semester",
+      "Value": "26S1"
+    },
+    {
+      "Key": "TeamId",
+      "Value": "team14"
+    },
+    {
+      "Key": "StudentId",
+      "Value": "s1402"
+    },
+    {
+      "Key": "ProjectName",
+      "Value": "airbnb"
+    },
+    {
+      "Key": "CreatedByNotebook",
+      "Value": "01A_setup_sagemaker_mlflow_app"
+    }
+  ]
+}

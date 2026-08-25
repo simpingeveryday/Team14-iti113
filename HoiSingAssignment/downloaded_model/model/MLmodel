@@ -1,0 +1,105 @@
+artifact_path: s3://nyp-26s1-iti113/iti113/team14/mlflow-app-artifacts/workspaces/default/1/models/m-1d5177e4941f48b1bed4f1131c278a10/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.12.13
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.7.2
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.15.1
+model_id: m-1d5177e4941f48b1bed4f1131c278a10
+model_size_bytes: 5518355
+model_uuid: m-1d5177e4941f48b1bed4f1131c278a10
+prompts: null
+run_id: 443da8005a87479aa36d65304eda50ef
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "float", "name": "accommodates", "required": true}, {"type":
+    "float", "name": "bedrooms", "required": true}, {"type": "float", "name": "persons_per_bedroom",
+    "required": true}, {"type": "float", "name": "dist_center_km", "required": true},
+    {"type": "float", "name": "lat_coarse", "required": true}, {"type": "float", "name":
+    "lon_coarse", "required": true}, {"type": "float", "name": "amenity_count", "required":
+    true}, {"type": "float", "name": "rare_amenity_count", "required": true}, {"type":
+    "float", "name": "neighbourhood_freq", "required": true}, {"type": "float", "name":
+    "host_tenure_days", "required": true}, {"type": "float", "name": "host_response_rate",
+    "required": true}, {"type": "float", "name": "host_acceptance_rate", "required":
+    true}, {"type": "float", "name": "log_host_listings", "required": true}, {"type":
+    "float", "name": "log_minimum_nights", "required": true}, {"type": "float", "name":
+    "maximum_nights", "required": true}, {"type": "float", "name": "review_scores_rating",
+    "required": true}, {"type": "float", "name": "review_scores_accuracy", "required":
+    true}, {"type": "float", "name": "review_scores_cleanliness", "required": true},
+    {"type": "float", "name": "review_scores_checkin", "required": true}, {"type":
+    "float", "name": "review_scores_communication", "required": true}, {"type": "float",
+    "name": "review_scores_location", "required": true}, {"type": "float", "name":
+    "review_scores_value", "required": true}, {"type": "float", "name": "host_is_superhost",
+    "required": true}, {"type": "float", "name": "host_has_profile_pic", "required":
+    true}, {"type": "float", "name": "host_identity_verified", "required": true},
+    {"type": "float", "name": "instant_bookable", "required": true}, {"type": "float",
+    "name": "host_info_missing", "required": true}, {"type": "float", "name": "host_response_rate_missing",
+    "required": true}, {"type": "float", "name": "host_acceptance_rate_missing", "required":
+    true}, {"type": "float", "name": "bedrooms_missing", "required": true}, {"type":
+    "float", "name": "has_review_scores", "required": true}, {"type": "float", "name":
+    "is_monthly_min", "required": true}, {"type": "float", "name": "amen_wifi", "required":
+    true}, {"type": "float", "name": "amen_essentials", "required": true}, {"type":
+    "float", "name": "amen_kitchen", "required": true}, {"type": "float", "name":
+    "amen_long_term_stays_allowed", "required": true}, {"type": "float", "name": "amen_tv",
+    "required": true}, {"type": "float", "name": "amen_hangers", "required": true},
+    {"type": "float", "name": "amen_hair_dryer", "required": true}, {"type": "float",
+    "name": "amen_iron", "required": true}, {"type": "float", "name": "amen_washer",
+    "required": true}, {"type": "float", "name": "amen_heating", "required": true},
+    {"type": "float", "name": "amen_dedicated_workspace", "required": true}, {"type":
+    "float", "name": "amen_shampoo", "required": true}, {"type": "float", "name":
+    "amen_hot_water", "required": true}, {"type": "float", "name": "amen_smoke_alarm",
+    "required": true}, {"type": "float", "name": "amen_air_conditioning", "required":
+    true}, {"type": "float", "name": "amen_dishes_and_silverware", "required": true},
+    {"type": "float", "name": "amen_refrigerator", "required": true}, {"type": "float",
+    "name": "amen_cooking_basics", "required": true}, {"type": "float", "name": "amen_elevator",
+    "required": true}, {"type": "float", "name": "amen_microwave", "required": true},
+    {"type": "float", "name": "amen_bed_linens", "required": true}, {"type": "float",
+    "name": "amen_fire_extinguisher", "required": true}, {"type": "float", "name":
+    "amen_dryer", "required": true}, {"type": "float", "name": "amen_stove", "required":
+    true}, {"type": "float", "name": "amen_coffee_maker", "required": true}, {"type":
+    "float", "name": "amen_oven", "required": true}, {"type": "float", "name": "amen_first_aid_kit",
+    "required": true}, {"type": "float", "name": "amen_carbon_monoxide_alarm", "required":
+    true}, {"type": "float", "name": "amen_free_parking_on_premises", "required":
+    true}, {"type": "float", "name": "amen_private_entrance", "required": true}, {"type":
+    "float", "name": "city_Bangkok", "required": true}, {"type": "float", "name":
+    "city_Cape_Town", "required": true}, {"type": "float", "name": "city_Hong_Kong",
+    "required": true}, {"type": "float", "name": "city_Istanbul", "required": true},
+    {"type": "float", "name": "city_Mexico_City", "required": true}, {"type": "float",
+    "name": "city_New_York", "required": true}, {"type": "float", "name": "city_Paris",
+    "required": true}, {"type": "float", "name": "city_Rio_de_Janeiro", "required":
+    true}, {"type": "float", "name": "city_Rome", "required": true}, {"type": "float",
+    "name": "city_Sydney", "required": true}, {"type": "float", "name": "room_type_Entire_place",
+    "required": true}, {"type": "float", "name": "room_type_Hotel_room", "required":
+    true}, {"type": "float", "name": "room_type_Private_room", "required": true},
+    {"type": "float", "name": "room_type_Shared_room", "required": true}, {"type":
+    "float", "name": "property_group_apartment_condo", "required": true}, {"type":
+    "float", "name": "property_group_bnb_guesthouse", "required": true}, {"type":
+    "float", "name": "property_group_hotel_hostel", "required": true}, {"type": "float",
+    "name": "property_group_house_villa", "required": true}, {"type": "float", "name":
+    "property_group_other", "required": true}, {"type": "float", "name": "property_group_room_other_dwelling",
+    "required": true}, {"type": "float", "name": "property_group_unique_stay", "required":
+    true}, {"type": "float", "name": "host_response_time_within_an_hour", "required":
+    true}, {"type": "float", "name": "host_response_time_within_a_few_hours", "required":
+    true}, {"type": "float", "name": "host_response_time_within_a_day", "required":
+    true}, {"type": "float", "name": "host_response_time_a_few_days_or_more", "required":
+    true}, {"type": "float", "name": "host_response_time_no_history", "required":
+    true}]'
+  outputs: '[{"type": "double", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-08-23 09:17:37.852401'
