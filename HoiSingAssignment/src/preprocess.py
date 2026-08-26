@@ -46,6 +46,8 @@ import sklearn
 print(f"pipeline_lib v{LIB_VERSION} | pandas {pd.__version__} | numpy {np.__version__} "
       f"| sklearn {sklearn.__version__}", flush=True)
 print(f"resolved input: {input_path}", flush=True)
+print("preprocess v1.2 — code-change-trigger demo build", flush=True)
+print("preprocess v1.3 — live E2E code-trigger build", flush=True)
 
 # The sklearn 1.2-1 container ships pandas 1.1.x, which predates the
 # encoding_errors kwarg (pandas >= 1.3). Handing pandas a file object opened

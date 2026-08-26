@@ -56,13 +56,7 @@ contract exactly: same five request fields, same seven response fields.
 RECOMMEND_SCALING, and why it is not a tuning knob
 --------------------------------------------------
 deal_value = pred_price - price has to be scaled to [0,1] before it can be added to a
-probability. WHERE the min and max come from decides whether w_value does anything,
-and the project's own notebooks disagreed about it:
-
-    cell 19  compare_recsys   filters first, then fits  -> candidate set
-    cell 21  evaluate_ndcg    filters first, then fits  -> candidate set
-    cell 14  recommend_airbnb fits at load, then filters -> global
-    Test_API_Gradio.ipynb     fits at load, then filters -> global
+probability. 
 
 So the Utility Lift and the NDCG@10 in the report measured candidate-set scaling while
 the API served global. Under global, prices spanning ten currencies put a single
@@ -71,10 +65,7 @@ same number and the ranking is instant_book_prob alone at any w_value below 1. T
 why the served API returned an overpriced listing (EUR 85 against a EUR 64.84 model
 value) ahead of a EUR 25 bargain at rank 1.
 
-The default is therefore `candidates`, which is what was evaluated. `--scaling global`
-reproduces the previously served behaviour exactly. The self test asserts BOTH against
-literal transcriptions of both notebooks, so neither is inherited by accident and the
-default cannot be flipped back without the mismatch being re-argued.
+The default is therefore `candidates`, which is what was evaluated.
 """
 
 from __future__ import annotations
@@ -141,12 +132,6 @@ SHAP_CHUNK = int(os.environ.get("SHAP_CHUNK", "64"))
 # alternative is a second copy of the algorithm in a notebook, drifting from this one
 # -- which is exactly how the served ranking and notebook 05's evaluation ended up
 # disagreeing about scaling in the first place.
-# 127.0.0.1, not localhost. In a container whose /etc/hosts maps localhost to BOTH
-# 127.0.0.1 and ::1, getaddrinfo can hand back the IPv6 address first; with no IPv6
-# loopback configured the connect fails with EADDRNOTAVAIL ("Cannot assign requested
-# address", errno 99) rather than the ECONNREFUSED you would expect. That reads like a
-# broken app rather than a server that is not running -- and it fails even when the
-# server IS running, because serve_api binds an IPv4 address.
 RECSYS_API_URL = os.environ.get("RECSYS_API_URL", "http://127.0.0.1:8000")
 RECSYS_BACKEND = os.environ.get("RECSYS_BACKEND", "auto").lower()   # api | inline | auto
 API_HOST = os.environ.get("API_HOST", "0.0.0.0")
@@ -164,8 +149,7 @@ API_PORT = int(os.environ.get("API_PORT", "8000"))
 #               (cell 14) used. Set RECOMMEND_SCALING=global or pass --scaling global
 #               to reproduce the existing client output exactly.
 #
-# The two disagreed, and the disagreement was not cosmetic. Prices span ten
-# currencies, so the global range is set by outliers in other cities; a Paris
+# Prices span ten currencies, so the global range is set by outliers in other cities; a Paris
 # candidate set then occupies a sliver of it, every listing scales to nearly the same
 # number, and the ranking is instant_book_prob alone at any w_value below 1. The
 # reported NDCG and Utility Lift therefore described an algorithm that was never

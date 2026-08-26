@@ -1,16 +1,30 @@
 {
   "iti113/team14/trigger/input/Listings_2021-04.csv|146046994": {
-    "event_id": "evt-20260826-055541-7d5ec9",
+    "event_id": "evt-20260826-072119-7d5ec9",
     "status": "Succeeded",
-    "at": "2026-08-26T06:08:46.822195+00:00"
+    "at": "2026-08-26T07:21:20.189969+00:00"
   },
   "iti113/team14/trigger/input/Listings_2021-05_schema_drift.csv|171775": {
-    "event_id": "evt-20260826-060853-340fea",
+    "event_id": "evt-20260826-072129-340fea",
     "status": "Failed",
-    "at": "2026-08-26T06:14:25.586802+00:00",
+    "at": "2026-08-26T07:21:29.712326+00:00",
     "failed_step": "TrainModel",
     "failure": "ClientError: AlgorithmError: framework error: \nTraceback (most recent call last):\n  File \"/miniconda3/lib/python3.9/site-packages/sagemaker_containers/_trainer.py\", line 84, in train\n    entrypoint()\n  File \"/miniconda3/lib/python3.9/site-packages/sagemaker_sklearn_container/training.py\", line 39, in main\n    train(environment.Environment())\n  File \"/miniconda3/lib/python3.9/site-packages/sagemaker_sklearn_container/training.py\", line 31, in train\n    entry_point.run(uri=training_environment.module_dir,\n  File \"/miniconda3/lib/python3.9/site-packages/sagemaker_training/entry_point.py\", line 108, in run\n    return runner.get(runner_type, user_entry_point, args, env_vars, extra_opts).run(\n  File \"/miniconda3/lib/python3.9/site-packages/sagemaker_training/process.py\", line 424, in run\n    process = check_error(\n  File \"/miniconda3/lib/python3.9/site-packages/sagemaker_training/process.py\", line 335, in check_error\n    raise error_class(\nsagemaker_training.errors.ExecuteUserScriptError: ExecuteUserScriptError:\nExitCode 1\nErro",
     "execution_arn": "arn:aws:sagemaker:ap-southeast-1:044528205969:pipeline/iti113-team14-airbnb-price-triggered/execution/3jwvqlfcfv1t",
     "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/Listings_2021-05_schema_drift.csv"
+  },
+  "iti113/team14/trigger/input/Listings_live_1787728892.csv|146046994": {
+    "event_id": "evt-20260826-072133-392ca1",
+    "status": "Succeeded",
+    "at": "2026-08-26T07:33:38.237042+00:00"
+  },
+  "iti113/team14/trigger/input/RecommendationSystemSyntheticListing.csv_1787729110.csv|4292": {
+    "event_id": "evt-20260826-073338-6a56e4",
+    "status": "Failed",
+    "at": "2026-08-26T07:36:39.813127+00:00",
+    "failed_step": "PreprocessData",
+    "failure": "ClientError: AlgorithmError: , exit code: 1",
+    "execution_arn": "arn:aws:sagemaker:ap-southeast-1:044528205969:pipeline/iti113-team14-airbnb-price-triggered/execution/coqn7itczt8g",
+    "quarantined": "s3://nyp-26s1-iti113/iti113/team14/trigger/quarantine/RecommendationSystemSyntheticListing.csv_1787729110.csv"
   }
 }
