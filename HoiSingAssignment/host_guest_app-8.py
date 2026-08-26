@@ -2196,8 +2196,7 @@ def _explain_card(ex: dict) -> str:
 def host_price(explain, *values):
     """Price and friction first. The explanation follows in a chained event.
 
-    Split in two because SHAP costs 128 endpoint calls and the price costs one: a
-    single handler would make the host wait for the breakdown before seeing the
+    a single handler would make the host wait for the breakdown before seeing the
     number they asked for. The chained pass re-scores f(x) as one of its coalitions,
     so the duplication is one call in 129.
     """
