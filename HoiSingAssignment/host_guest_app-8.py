@@ -1639,9 +1639,7 @@ def recsys_recommend(city: str, min_guests: int = 2, max_price: float = 150.0,
     out = api_recommend(**q)
     out["backend"] = "inline"
     if api_error:
-        out["backend_note"] = (f"Ranked in this process. Nothing is serving the API on "
-                               f"{RECSYS_API_URL} -- start the app with `--with-api` to "
-                               f"route this over HTTP instead.")
+        out["backend_note"] = (f"Ranked in this process.")
     return out
 
 
@@ -2576,7 +2574,7 @@ def guest_body(host_state=None) -> None:
     cities = recsys_cities()
     gr.Markdown(f"""
         # Find a place to stay
-        `{recsys_backend_name()}`
+        
 
         Two model predictions decide the order. **Value** is how far below the price
         model's estimate a listing is priced. **Convenience** is the instant-booking
