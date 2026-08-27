@@ -1,0 +1,13 @@
+{
+    "team_id": "team14",
+    "student_id": "s1401",
+    "project_name": "airbnb-instant-booking",
+    "best_run_id": "269122992643415f9a14e4ff035f2595",
+    "best_run_name": "team14_s1401_random_forest_tuning",
+    "best_auc": 0.8383,
+    "best_model_uri": "runs:/269122992643415f9a14e4ff035f2595/best_model",
+    "mlflow_tracking_uri": "arn:aws:sagemaker:ap-southeast-1:044528205969:mlflow-app/app-PIGMOQJH46PS",
+    "mlflow_experiment": "ITI113/team14/InstantBooking-Classification",
+    "tracking_backend": "sagemaker_mlflow_app",
+    "mlflow_app_team_tag": "team14"
+}
